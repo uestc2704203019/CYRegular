@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "NSString+Regular.h"
+#import "CYRegular.h"
 
 @interface ViewController ()
 
@@ -18,13 +18,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    BOOL isPhone = [@"13438862542" isMobileNumber];
+    [self regularTest];
+    
+    // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)regularTest
+{
+    BOOL isAvailableAccount = [@"ssersjyopjs" isAvailableAccount:3 maxLength:20];
     
     BOOL isAllNumber = [@"134388s62542" isAllNumber];
     
     BOOL isLightPhone = [@"13438862542" isLightMobileNumber];
-    
-    // Do any additional setup after loading the view, typically from a nib.
+
 }
 
 

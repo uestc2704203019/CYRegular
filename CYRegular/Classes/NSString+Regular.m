@@ -90,4 +90,47 @@
     }
 }
 
+//判断是否包含中文汉字
+- (BOOL)isContainHans
+{
+    NSString *patternRegex = [NSString stringWithFormat:@"[\u4e00-\u9fa5]"];
+    return [self regularWithPattern:patternRegex];
+}
+
+//是否是邮箱
+- (BOOL)isEmail
+{
+    NSString *patternRegex = [NSString stringWithFormat:@"^\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$"];
+    return [self regularWithPattern:patternRegex];
+}
+
+//判断是不是网址
+- (BOOL)isUrl
+{
+    NSString *patternRegex = [NSString stringWithFormat:@"^http(s)?://([\\w-]+\\.)+[\\w-]+(/[\\w- ./?%%&=]*)?"];
+    return [self regularWithPattern:patternRegex];
+}
+
+//判断账号是否可用(字母数字下划线匹配)
+- (BOOL)isAvailableAccount:(int)minLength maxLength:(int)maxLength
+{
+    NSString *patternRegex = [NSString stringWithFormat:@"^[a-zA-Z][a-zA-Z0-9_]{%d,%d}$",minLength,maxLength];
+    return [self regularWithPattern:patternRegex];
+}
+
+
+//正则验证
+- (BOOL)regularWithPattern:(NSString *)pattern
+{
+    NSError *error = nil;
+    NSRegularExpression *regularExpression = [NSRegularExpression regularExpressionWithPattern:pattern options:NSRegularExpressionCaseInsensitive error:&error];
+    NSArray <NSTextCheckingResult *> *result = [regularExpression matchesInString:self options:0 range:NSMakeRange(0, self.length)];
+    if (result.count>0) {
+        return YES;
+    }else{
+        NSLog(@"%@",[error localizedDescription]);
+    }
+    return NO;
+}
+
 @end

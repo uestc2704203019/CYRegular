@@ -22,5 +22,17 @@
 //判断是否全是数字
 - (BOOL)isAllNumber;
 
+//判断是否包含中文汉字
+- (BOOL)isContainHans;
+
+//是否是邮箱
+- (BOOL)isEmail;
+
+//判断是不是网址
+- (BOOL)isUrl;
+
+//判断账号是否可用(字母数字下划线匹配)
+- (BOOL)isAvailableAccount:(int)minLength maxLength:(int)maxLength;
+
 
 @end

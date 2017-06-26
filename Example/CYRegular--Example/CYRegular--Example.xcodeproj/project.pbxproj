@@ -43,6 +43,7 @@
 		E67372D71F00EEAF00EC100F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E67372E31F00EEBA00EC100F /* NSString+Regular.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Regular.h"; sourceTree = "<group>"; };
 		E67372E41F00EEBA00EC100F /* NSString+Regular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Regular.m"; sourceTree = "<group>"; };
+		E67373181F00FEA100EC100F /* CYRegular.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYRegular.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +119,7 @@
 		E67372E01F00EEBA00EC100F /* CYRegular */ = {
 			isa = PBXGroup;
 			children = (
+				E67373181F00FEA100EC100F /* CYRegular.h */,
 				E67372E11F00EEBA00EC100F /* Classes */,
 			);
 			name = CYRegular;
