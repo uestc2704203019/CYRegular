@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "NSString+Regular.h"
 
 @interface ViewController ()
 
@@ -16,6 +17,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    BOOL isPhone = [@"13438862542" isMobileNumber];
+    
+    BOOL isAllNumber = [@"134388s62542" isAllNumber];
+    
+    BOOL isLightPhone = [@"13438862542" isLightMobileNumber];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 

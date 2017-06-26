@@ -14,6 +14,7 @@
 		E67372C81F00EEAE00EC100F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E67372C71F00EEAE00EC100F /* Assets.xcassets */; };
 		E67372CB1F00EEAE00EC100F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E67372C91F00EEAE00EC100F /* LaunchScreen.storyboard */; };
 		E67372D61F00EEAF00EC100F /* CYRegular__ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E67372D51F00EEAF00EC100F /* CYRegular__ExampleTests.m */; };
+		E67372E61F00EEBA00EC100F /* NSString+Regular.m in Sources */ = {isa = PBXBuildFile; fileRef = E67372E41F00EEBA00EC100F /* NSString+Regular.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		E67372D11F00EEAF00EC100F /* CYRegular--ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CYRegular--ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E67372D51F00EEAF00EC100F /* CYRegular__ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYRegular__ExampleTests.m; sourceTree = "<group>"; };
 		E67372D71F00EEAF00EC100F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E67372E31F00EEBA00EC100F /* NSString+Regular.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Regular.h"; sourceTree = "<group>"; };
+		E67372E41F00EEBA00EC100F /* NSString+Regular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Regular.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,7 @@
 		E67372AF1F00EEAE00EC100F = {
 			isa = PBXGroup;
 			children = (
+				E67372E01F00EEBA00EC100F /* CYRegular */,
 				E67372BA1F00EEAE00EC100F /* CYRegular--Example */,
 				E67372D41F00EEAF00EC100F /* CYRegular--ExampleTests */,
 				E67372B91F00EEAE00EC100F /* Products */,
@@ -109,6 +113,24 @@
 				E67372D71F00EEAF00EC100F /* Info.plist */,
 			);
 			path = "CYRegular--ExampleTests";
+			sourceTree = "<group>";
+		};
+		E67372E01F00EEBA00EC100F /* CYRegular */ = {
+			isa = PBXGroup;
+			children = (
+				E67372E11F00EEBA00EC100F /* Classes */,
+			);
+			name = CYRegular;
+			path = ../../CYRegular;
+			sourceTree = "<group>";
+		};
+		E67372E11F00EEBA00EC100F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E67372E31F00EEBA00EC100F /* NSString+Regular.h */,
+				E67372E41F00EEBA00EC100F /* NSString+Regular.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +237,7 @@
 			files = (
 				E67372C31F00EEAE00EC100F /* ViewController.m in Sources */,
 				E67372C01F00EEAE00EC100F /* AppDelegate.m in Sources */,
+				E67372E61F00EEBA00EC100F /* NSString+Regular.m in Sources */,
 				E67372BD1F00EEAE00EC100F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

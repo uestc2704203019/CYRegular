@@ -84,9 +84,9 @@
 {
     NSString *tempStr = [self stringByTrimmingCharactersInSet:[NSCharacterSet decimalDigitCharacterSet]];
     if (tempStr.length > 0) {
-        return YES;
-    }else{
         return NO;
+    }else{
+        return YES;
     }
 }
 
